@@ -10,7 +10,7 @@ namespace WebStoryDoc.Models
     {
         public virtual ulong Id { set; get; }
         public virtual string Name { set; get; }
-        public virtual IList<User> ListUser { set; get; }
+        public virtual IList<User> ListUser { set; get; } //Список участников группы
 
         public GroupUsers()
         {
