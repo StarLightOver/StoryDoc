@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentNHibernate.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,16 @@ namespace WebStoryDoc.Models
         public GroupUsers()
         {
             ListUser = new List<User>();
+        }
+    }
+
+    public class GroupUsersMap : ClassMap<GroupUsers>
+    {
+        public GroupUsersMap()
+        {
+            Id(u => u.Id).GeneratedBy.HiLo("0");
+            Map(u => u.Name).Length(100);
+            Map(u => u.ListUser);
         }
     }
 }

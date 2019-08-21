@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentNHibernate.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,14 @@ namespace WebStoryDoc.Models
     {
         public virtual ulong Id { set; get; }
         public virtual string Name { set; get; }
+    }
+
+    public class FolderMap : ClassMap<Folder>
+    {
+        public FolderMap()
+        {
+            Id(u => u.Id).GeneratedBy.HiLo("0");
+            Map(u => u.Name).Length(100);
+        }
     }
 }

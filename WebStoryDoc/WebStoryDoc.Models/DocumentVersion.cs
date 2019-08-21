@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentNHibernate.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,17 @@ namespace WebStoryDoc.Models
         public virtual string Author { set; get; }
         public virtual DateTime Date { set; get; }
         public virtual Folder Document { set; get; }
+    }
+
+    public class DocumentVersionMap : ClassMap<DocumentVersion>
+    {
+        public DocumentVersionMap()
+        {
+            Id(u => u.Id).GeneratedBy.HiLo("0");
+            Map(u => u.File).Length(1000);
+            Map(u => u.Author).Length(100);
+            Map(u => u.Date);
+            Map(u => u.Document);
+        }
     }
 }
