@@ -22,7 +22,7 @@ namespace WebStoryDoc.Models
         {
             Id(u => u.Id).GeneratedBy.HiLo("0");
             Map(u => u.File).Length(1000);
-            Map(u => u.Author).Length(100);
+            References(u => u.Author).Column("Author");
             Map(u => u.Date);
             Map(u => u.Document);
         }

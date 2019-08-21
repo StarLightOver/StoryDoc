@@ -13,6 +13,12 @@ namespace WebStoryDoc.Models
         public virtual string Login { set; get; }
         public virtual string Password { set; get; }
         public virtual GroupUsers Group { set; get; }
+        public virtual IList<Document> ListDocument { set; get; }
+
+        public User()
+        {
+            ListDocument = new List<Document>();
+        }
     }
 
     public class UserMap : ClassMap<User>
@@ -22,7 +28,8 @@ namespace WebStoryDoc.Models
             Id(u => u.Id).GeneratedBy.HiLo("0");
             Map(u => u.Login).Length(30).Not.Nullable();
             Map(u => u.Password).Length(30).Not.Nullable();
-            Map(u => u.Group);
+            References(u => u.Group).Column("GroupUsers");
+            HasMany(u => u.ListDocument).Inverse().Cascade.All().KeyColumn("Author");
         }
     }
 
