@@ -10,20 +10,22 @@ namespace WebStoryDoc.Models
 {
     public class Rights
     {
+        public virtual long Id { set; get; }
         public virtual Folder Folder { set; get; }
         public virtual string Level { set; get; }
         public virtual GroupUsers GroupUser { set; get; }
-        public virtual User User { set; get; }
+        public virtual Person User { set; get; }
     }
 
     public class RightsMap : ClassMap<Rights>
     {
         public RightsMap()
         {
-            Map(u => u.Folder);
+            Id(u => u.Id).GeneratedBy.HiLo("0");
+            References(u => u.Folder).Cascade.SaveUpdate();
             Map(u => u.Level).Length(100);
-            Map(u => u.GroupUser);
-            Map(u => u.User);
+            References(u => u.GroupUser).Cascade.SaveUpdate();
+            References(u => u.User).Cascade.SaveUpdate();
         }
     }
 }

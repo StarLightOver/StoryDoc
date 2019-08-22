@@ -9,14 +9,12 @@ namespace WebStoryDoc.Models
 {
     public class GroupUsers
     {
-        public virtual ulong Id { set; get; }
-        public virtual string Name { set; get; }
-        public virtual IList<User> ListUser { set; get; } //Список участников группы
+        public virtual long Id { set; get; }
 
-        public GroupUsers()
-        {
-            ListUser = new List<User>();
-        }
+        public virtual string Name { set; get; }
+
+        public virtual IList<Person> ListUser { set; get; } //Список участников группы
+        
     }
 
     public class GroupUsersMap : ClassMap<GroupUsers>
@@ -25,7 +23,7 @@ namespace WebStoryDoc.Models
         {
             Id(u => u.Id).GeneratedBy.HiLo("0");
             Map(u => u.Name).Length(100);
-            HasMany(u => u.ListUser).AsList().Inverse();
+            HasMany(u => u.ListUser).Inverse();
         }
     }
 }

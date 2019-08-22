@@ -1,6 +1,5 @@
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\WebStoryDoc.Models.dll
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\WebStoryDoc.Models.pdb
-C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.csprojAssemblyReference.cache
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.dll
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.pdb

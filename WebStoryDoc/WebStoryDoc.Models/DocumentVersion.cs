@@ -9,9 +9,9 @@ namespace WebStoryDoc.Models
 {
     public class DocumentVersion
     {
-        public virtual ulong Id { set; get; }
-        public virtual string File { set; get; } //Путь к файлу (?)
-        public virtual string Author { set; get; }
+        public virtual long Id { set; get; }
+        public virtual Byte[] FileContent { set; get; }
+        public virtual Person Author { set; get; }
         public virtual DateTime Date { set; get; }
         public virtual Folder Document { set; get; }
     }
@@ -21,10 +21,10 @@ namespace WebStoryDoc.Models
         public DocumentVersionMap()
         {
             Id(u => u.Id).GeneratedBy.HiLo("0");
-            Map(u => u.File).Length(1000);
-            References(u => u.Author).Column("Author");
+            Map(u => u.FileContent).Length(1000);
+            References(u => u.Author).Cascade.SaveUpdate();
             Map(u => u.Date);
-            Map(u => u.Document);
+            References(u => u.Document).Cascade.SaveUpdate();
         }
     }
 }

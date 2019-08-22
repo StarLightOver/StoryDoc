@@ -70,7 +70,7 @@
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Rights.cs" />
     <Compile Include="ServiceAttribute.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

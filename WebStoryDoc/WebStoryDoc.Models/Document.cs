@@ -11,18 +11,16 @@ namespace WebStoryDoc.Models
     {
         public virtual string TypeDocument { set; get; }
         public virtual DateTime Date { set; get; }
-        public virtual string Author { set; get; }
-        public virtual Folder Folder { get; set; }
+        public virtual Person Author { set; get; }
     }
 
-    public class DocumentMap : ClassMap<Document>
+    public class DocumentMap : SubclassMap<Document>
     {
         public DocumentMap()
         {
             Map(u => u.TypeDocument).Length(100);
             Map(u => u.Date);
-            References(u => u.Author).Column("Author");
-            References(u => u.Folder).Column("Document");
+            References(u => u.Author).Cascade.SaveUpdate();
         }
     }
 }
