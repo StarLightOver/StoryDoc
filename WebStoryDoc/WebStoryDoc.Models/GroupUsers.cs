@@ -25,7 +25,7 @@ namespace WebStoryDoc.Models
         {
             Id(u => u.Id).GeneratedBy.HiLo("0");
             Map(u => u.Name).Length(100);
-            HasMany(u => u.ListUser).Inverse().Cascade.All().KeyColumn("GroupUsers");
+            HasMany(u => u.ListUser).AsList().Inverse();
         }
     }
 }

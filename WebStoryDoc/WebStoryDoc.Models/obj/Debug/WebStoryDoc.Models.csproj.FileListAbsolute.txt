@@ -4,3 +4,16 @@ C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.dll
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.pdb
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Antlr3.Runtime.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\FluentNHibernate.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Iesi.Collections.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\NHibernate.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Remotion.Linq.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Antlr3.Runtime.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\FluentNHibernate.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Iesi.Collections.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\NHibernate.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Remotion.Linq.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.csproj.CopyComplete

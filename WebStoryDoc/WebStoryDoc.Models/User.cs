@@ -10,9 +10,13 @@ namespace WebStoryDoc.Models
     public class User
     {
         public virtual ulong Id { set; get; }
+
         public virtual string Login { set; get; }
+
         public virtual string Password { set; get; }
+
         public virtual GroupUsers Group { set; get; }
+
         public virtual IList<Document> ListDocument { set; get; }
 
         public User()
@@ -28,7 +32,7 @@ namespace WebStoryDoc.Models
             Id(u => u.Id).GeneratedBy.HiLo("0");
             Map(u => u.Login).Length(30).Not.Nullable();
             Map(u => u.Password).Length(30).Not.Nullable();
-            References(u => u.Group).Column("GroupUsers");
+            References(u => u.Group);
             HasMany(u => u.ListDocument).Inverse().Cascade.All().KeyColumn("Author");
         }
     }
