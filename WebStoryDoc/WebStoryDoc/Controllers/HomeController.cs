@@ -10,11 +10,9 @@ namespace WebStoryDoc.Controllers
 {
     public class HomeController : Controller
     {
-        private UserRepository userRepository;
 
-        public HomeController(UserRepository userRepository)
+        public HomeController()
         {
-            this.userRepository = userRepository;
         }
 
         public ActionResult Index()
