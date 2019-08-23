@@ -66,6 +66,7 @@
     <Compile Include="DocumentVersion.cs" />
     <Compile Include="Folder.cs" />
     <Compile Include="GroupUsers.cs" />
+    <Compile Include="Repositories\GroupUsersRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Rights.cs" />
