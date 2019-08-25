@@ -64,6 +64,10 @@
   <ItemGroup>
     <Compile Include="Document.cs" />
     <Compile Include="DocumentVersion.cs" />
+    <Compile Include="Filters\BaseFilter.cs" />
+    <Compile Include="Filters\FastSearchAttribute.cs" />
+    <Compile Include="Filters\Range.cs" />
+    <Compile Include="Filters\UserFilter.cs" />
     <Compile Include="Folder.cs" />
     <Compile Include="GroupUsers.cs" />
     <Compile Include="Repositories\GroupUsersRepository.cs" />

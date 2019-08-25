@@ -21,7 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+
                     <li>@Html.ActionLink("Создать пользователя", "Create", "User")</li>
                     <li>@Html.ActionLink("Создать группу", "Create", "GroupUsers")</li>
                 </ul>
@@ -30,6 +30,8 @@
     </div>
     <div class="container body-content">
         @RenderBody()
+
+        @Html.ActionLink("Вывести список пользователей", "List", "User")
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
