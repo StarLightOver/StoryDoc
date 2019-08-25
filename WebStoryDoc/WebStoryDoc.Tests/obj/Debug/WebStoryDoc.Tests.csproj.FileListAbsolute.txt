@@ -1,0 +1,2 @@
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Tests\obj\Debug\WebStoryDoc.Tests.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Tests\obj\Debug\WebStoryDoc.Tests.csproj.CoreCompileInputs.cache

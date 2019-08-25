@@ -1,0 +1,15 @@
+﻿@using WebStoryDoc.Models.Filters
+@model WebStoryDoc.Models.UserListModel
+@{
+    ViewBag.Title = "Список пользователей";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+
+@Html.Partial("Filter", new UserFilter())
+
+@Html.Partial("Grid", Model.Items)
