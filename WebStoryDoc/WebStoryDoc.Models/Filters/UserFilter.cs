@@ -10,7 +10,7 @@ namespace WebStoryDoc.Models.Filters
     {
         public string Login { get; set; }
 
-        public  GroupUsers GroupUsers { set; get; }
+        public GroupUsers GroupUsers { set; get; }
         
         public Range<DateTime> CreationDate { get; set; }
 

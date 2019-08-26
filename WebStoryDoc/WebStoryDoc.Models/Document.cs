@@ -10,7 +10,6 @@ namespace WebStoryDoc.Models
     public class Document : Folder
     {
         public virtual string TypeDocument { set; get; }
-        public virtual DateTime Date { set; get; }
         public virtual Person Author { set; get; }
     }
 
@@ -19,7 +18,6 @@ namespace WebStoryDoc.Models
         public DocumentMap()
         {
             Map(u => u.TypeDocument).Length(100);
-            Map(u => u.Date);
             References(u => u.Author).Cascade.SaveUpdate();
         }
     }

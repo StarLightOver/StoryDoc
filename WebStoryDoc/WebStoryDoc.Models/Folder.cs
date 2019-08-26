@@ -10,8 +10,12 @@ namespace WebStoryDoc.Models
     public class Folder
     {
         public virtual long Id { set; get; }
+
         public virtual string Name { set; get; }
-        public virtual IList<Folder> ListFolder { get; set; }
+
+        public virtual DateTime CreationDate { set; get; }
+
+        public virtual Folder ExternalFolder { get; set; }
     }
 
     public class FolderMap : ClassMap<Folder>
@@ -20,7 +24,8 @@ namespace WebStoryDoc.Models
         {
             Id(u => u.Id).GeneratedBy.HiLo("0");
             Map(u => u.Name).Length(100);
-            HasMany(u => u.ListFolder).Inverse();
+            Map(u => u.CreationDate);
+            References(u => u.ExternalFolder).Cascade.SaveUpdate();
         }
     }
 }

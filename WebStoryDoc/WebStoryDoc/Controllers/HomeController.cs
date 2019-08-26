@@ -32,19 +32,5 @@ namespace WebStoryDoc.Controllers
             model.Time = DateTime.Now;
             return View(model);
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-            
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
