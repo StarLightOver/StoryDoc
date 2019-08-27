@@ -10,6 +10,9 @@ namespace WebStoryDoc.Models
     public class Document : Folder
     {
         public virtual string TypeDocument { set; get; }
+
+        public virtual Byte[] FileContent { set; get; }
+
         public virtual Person Author { set; get; }
     }
 
@@ -18,6 +21,7 @@ namespace WebStoryDoc.Models
         public DocumentMap()
         {
             Map(u => u.TypeDocument).Length(100);
+            Map(u => u.FileContent);
             References(u => u.Author).Cascade.SaveUpdate();
         }
     }

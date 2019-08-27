@@ -43,6 +43,13 @@ namespace WebStoryDoc.Models.Repositories
             return crit.List<Person>();
         }
 
+        public IEnumerable<GroupUsers> GroupUsersAll()
+        {
+            var resultGroupUsers = session.CreateCriteria<GroupUsers>().List<GroupUsers>();
+            
+            return resultGroupUsers;
+        }
+
         protected override void SetupFilter(ICriteria crit, UserFilter filter)
         {
             base.SetupFilter(crit, filter);

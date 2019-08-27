@@ -10,7 +10,7 @@ using WebStoryDoc.Models.Filters;
 
 namespace WebStoryDoc.Models.Repositories
 {
-    public class Repository<T, F>
+    public class Repository<T, F> : IRepository
         where T:class
         where F:BaseFilter
     {

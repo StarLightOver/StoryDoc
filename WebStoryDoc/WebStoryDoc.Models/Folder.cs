@@ -16,6 +16,8 @@ namespace WebStoryDoc.Models
         public virtual DateTime CreationDate { set; get; }
 
         public virtual Folder ExternalFolder { get; set; }
+
+        public virtual Person CreationAuthor { set; get; }
     }
 
     public class FolderMap : ClassMap<Folder>
@@ -26,6 +28,7 @@ namespace WebStoryDoc.Models
             Map(u => u.Name).Length(100);
             Map(u => u.CreationDate);
             References(u => u.ExternalFolder).Cascade.SaveUpdate();
+            References(u => u.CreationAuthor).Cascade.SaveUpdate();
         }
     }
 }

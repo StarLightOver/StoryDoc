@@ -19,7 +19,7 @@ namespace WebStoryDoc.Controllers
         {
             var model = new HomeModel
             {
-                Title = "Это супер крутое название",
+                Title = "Хранилище документов",
                 Time = DateTime.Now
             };
 

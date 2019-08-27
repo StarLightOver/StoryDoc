@@ -20,7 +20,10 @@ namespace WebStoryDoc.Controllers
 
         public ActionResult Create()
         {
-            var model = new UserModel();
+            var model = new UserModel()
+            {
+                GroupUsers = new SelectList(userRepository.GroupUsersAll(), "Id", "Name")
+            };
 
             return View(model);
         }
@@ -38,7 +41,7 @@ namespace WebStoryDoc.Controllers
                 Login = model.Login,
                 Password = model.Password,
                 CreationDate = DateTime.Now
-                
+                //GroupUsers = model.SelectGroupUsersId
             };
             userRepository.Save(user);
 

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using WebStoryDoc.Models;
+using WebStoryDoc.Models.Filters;
 using WebStoryDoc.Validation;
 
 namespace WebStoryDoc.Models
@@ -15,6 +16,7 @@ namespace WebStoryDoc.Models
         [DisplayName("Логин")]
         [Required]
         [Login]
+        [FastSearch]
         public string Login { set; get; }
 
         [DisplayName("Пароль")]
@@ -28,6 +30,15 @@ namespace WebStoryDoc.Models
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
 
-        public GroupUsers GroupUsers { set; get; }
+        public GroupUsers GroupUser { set; get; }
+
+        [DisplayName("Дата рождения")]
+        [DataType(DataType.Date)]
+        public DateTime BirthDate { set; get; }
+
+        [DisplayName("Группа пользователей")]
+        public long SelectGroupUsersId { set; get; }
+        
+        public System.Web.Mvc.SelectList GroupUsers { set; get; }
     }
 }

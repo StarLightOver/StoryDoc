@@ -78,7 +78,7 @@ namespace WebStoryDoc.App_Start
                 {
                     continue;
                 }
-                containerBuilder.RegisterType(type);
+                containerBuilder.RegisterType(type).AsSelf();
             }
 
             //Регистрируем модуль Автофага
