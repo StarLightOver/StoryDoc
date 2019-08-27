@@ -305,7 +305,6 @@
     <Content Include="Views\Folder\CreateFolder.cshtml" />
     <Content Include="Views\Folder\Index.cshtml" />
     <Content Include="Views\Folder\GridFolder.cshtml" />
-    <Content Include="Views\Folder\GridDocument.cshtml" />
     <Content Include="Views\Folder\CreateDocument.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\EntityList.cshtml" />
   </ItemGroup>
