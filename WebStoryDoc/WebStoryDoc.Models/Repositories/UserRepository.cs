@@ -21,7 +21,7 @@ namespace WebStoryDoc.Models.Repositories
         {
             //Создаем запрос на проверку, есть ли такой логин в БД
             var crit = session.CreateCriteria<Person>()
-                .Add(Restrictions.Eq("Login", login))
+                .Add(Restrictions.Eq("UserName", login))
                 .SetProjection(Projections.Count("Id"));
 
             //Получаем кол-во записей с таким логином. Конвертируем в int64 для дополнительной совместимости

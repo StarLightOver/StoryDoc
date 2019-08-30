@@ -10,7 +10,7 @@ namespace WebStoryDoc.Models
     public class DocumentVersion
     {
         public virtual long Id { set; get; }
-        public virtual Byte[] FileContent { set; get; }
+        public virtual byte[] FileContent { set; get; }
         public virtual Person Author { set; get; }
         public virtual DateTime Date { set; get; }
         public virtual Folder Document { set; get; }

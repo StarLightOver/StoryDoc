@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,9 +15,17 @@ namespace WebStoryDoc.Controllers
     {
         private UserRepository userRepository;
 
-        public UserController(UserRepository userRepository)
+        private GroupUsersRepository groupUsersRepository;
+
+        public UserManager UserManager
+        {
+            get { return HttpContext.GetOwinContext().GetUserManager<UserManager>(); }
+        }
+
+        public UserController(UserRepository userRepository, GroupUsersRepository groupUsersRepository)
         {
             this.userRepository = userRepository;
+            this.groupUsersRepository = groupUsersRepository;
         }
 
         public ActionResult Create()
@@ -38,16 +48,23 @@ namespace WebStoryDoc.Controllers
 
             var user = new Person
             {
-                Login = model.Login,
-                Password = model.Password,
-                CreationDate = DateTime.Now
-                //GroupUsers = model.SelectGroupUsersId
+                UserName = model.UserName,
+                CreationDate = DateTime.Now,
+                BirthDate = model.BirthDate,
+                GroupUsers = groupUsersRepository.Find(new GroupUsersFilter {Id = model.SelectGroupUsersId }).First()
             };
-            userRepository.Save(user);
 
-            return RedirectToAction("Index", "Home");
+            var res = UserManager.CreateAsync(user, model.Password);
+
+            if (res.Result == IdentityResult.Success)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(model);
         }
 
+        [Authorize]
         public ActionResult List(UserFilter filter)
         {
             var model = new UserListModel

@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ using WebStoryDoc.Models.Filters;
 namespace WebStoryDoc.Models
 {
     [Filter(Type = typeof(UserFilter))]
-    public class Person
+    public class Person : IUser<long>
     {
         public virtual long Id { set; get; }
         
-        public virtual string Login { set; get; }
+        public virtual string UserName { set; get; }
 
         public virtual string Password { set; get; }
 
@@ -31,8 +32,8 @@ namespace WebStoryDoc.Models
         {
             Table("UserTable");
             Id(u => u.Id).GeneratedBy.HiLo("0");
-            Map(u => u.Login).Length(30).Not.Nullable();
-            Map(u => u.Password).Length(30).Not.Nullable();
+            Map(u => u.UserName).Length(30).Not.Nullable();
+            Map(u => u.Password).Length(500).Not.Nullable();
             Map(u => u.CreationDate);
             Map(u => u.BirthDate);
             References(u => u.GroupUsers).Cascade.SaveUpdate();

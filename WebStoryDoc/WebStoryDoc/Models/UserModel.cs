@@ -17,7 +17,7 @@ namespace WebStoryDoc.Models
         [Required]
         [Login]
         [FastSearch]
-        public string Login { set; get; }
+        public string UserName { set; get; }
 
         [DisplayName("Пароль")]
         [Required]

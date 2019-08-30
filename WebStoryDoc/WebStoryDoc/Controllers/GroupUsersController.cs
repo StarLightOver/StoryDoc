@@ -8,6 +8,7 @@ using WebStoryDoc.Models.Repositories;
 
 namespace WebStoryDoc.Controllers
 {
+    //[Authorize]
     public class GroupUsersController : Controller
     {
         private GroupUsersRepository groupUsersRepository;

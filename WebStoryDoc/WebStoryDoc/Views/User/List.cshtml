@@ -6,10 +6,6 @@
 
 <h2>Список пользователей</h2>
 
-<p>
-    @Html.ActionLink("Добавить", "Create")
-</p>
-
 @Html.Partial("Filter", new UserFilter())
 
 @Html.Partial("Grid", Model.Items)

@@ -17,3 +17,5 @@ C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Remotion.Linq.EagerFetching.xml
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.csproj.CopyComplete
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\obj\Debug\WebStoryDoc.Models.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml

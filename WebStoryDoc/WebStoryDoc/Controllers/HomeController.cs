@@ -8,6 +8,7 @@ using WebStoryDoc.Models.Repositories;
 
 namespace WebStoryDoc.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
 

@@ -107,3 +107,13 @@ C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Au
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Autofac.Integration.Owin.xml
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.xml
 C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Security.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Security.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user\source\repos\ELMA StoryDoc\StoryDoc\WebStoryDoc\WebStoryDoc\bin\Microsoft.Owin.Security.OAuth.xml

@@ -38,12 +38,34 @@ namespace WebStoryDoc.Models.Repositories
                 catch
                 {
                     tran.Rollback();
+                    throw;
                 }
             }
             
         }
 
-        public virtual IList<T> Find (F filter)
+        public virtual void Delete(long id)
+        {
+            
+
+            using (var tran = session.BeginTransaction())
+            {
+                try
+                {
+                    var item = session.Get<T>(id);
+
+                    session.Delete(item);
+                    tran.Commit();
+                }
+                catch
+                {
+                    tran.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        public virtual IList<T> Find (F filter, FetchOptions fetchOptions = null)
         {
             var crit = session.CreateCriteria<T>();
 
@@ -52,7 +74,32 @@ namespace WebStoryDoc.Models.Repositories
                 SetupFilter(crit, filter);
             }
 
+            if (fetchOptions != null)
+            {
+                SetupFetchOptions(crit, fetchOptions);
+            }
+
             return crit.List<T>();
+        }
+
+        protected virtual void SetupFetchOptions(ICriteria crit, FetchOptions fetchOptions)
+        {
+            if (!string.IsNullOrEmpty(fetchOptions.SortExpression))
+            {
+                crit.AddOrder(fetchOptions.SortDirection == SortDirection.Asc ?
+                    Order.Asc(fetchOptions.SortExpression) :
+                    Order.Desc(fetchOptions.SortExpression));
+            }
+
+            if (fetchOptions.First != null)
+            {
+                crit.SetFirstResult(fetchOptions.First.Value);
+            }
+
+            if (fetchOptions.Count != null)
+            {
+                crit.SetMaxResults(fetchOptions.Count.Value);
+            }
         }
 
         protected virtual void SetupFilter(ICriteria crit, F filter)
