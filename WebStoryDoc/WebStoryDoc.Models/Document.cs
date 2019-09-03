@@ -11,6 +11,8 @@ namespace WebStoryDoc.Models
     {
         public virtual string TypeDocument { set; get; }
 
+        public virtual long? FileSize { set; get; }
+
         public virtual byte[] FileContent { set; get; }
     }
 
@@ -19,6 +21,7 @@ namespace WebStoryDoc.Models
         public DocumentMap()
         {
             Map(u => u.TypeDocument).Length(100);
+            Map(u => u.FileSize);
             Map(u => u.FileContent).Length(int.MaxValue);
         }
     }

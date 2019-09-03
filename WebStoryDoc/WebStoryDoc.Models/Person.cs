@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +14,16 @@ namespace WebStoryDoc.Models
     public class Person : IUser<long>
     {
         public virtual long Id { set; get; }
-        
+
+        [DisplayName("Имя пользователя")]
         public virtual string UserName { set; get; }
 
         public virtual string Password { set; get; }
 
+        [DisplayName("Дата создания")]
         public virtual DateTime CreationDate { set; get; }
 
+        [DisplayName("Дата рождения")]
         public virtual DateTime BirthDate { set; get; }
 
         public virtual GroupUsers GroupUsers { set; get; }

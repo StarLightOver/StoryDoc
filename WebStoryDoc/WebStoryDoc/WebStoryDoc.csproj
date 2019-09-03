@@ -181,6 +181,7 @@
     <Compile Include="Controllers\FolderController.cs" />
     <Compile Include="Controllers\GroupUsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Files\StreamHelper.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="Models\GroupUsersModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\ReportModel.cs" />
     <Compile Include="Models\SortLinkModel.cs" />
     <Compile Include="Models\UserListModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -336,6 +338,7 @@
     <Content Include="Views\Shared\SortLink.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\Report\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

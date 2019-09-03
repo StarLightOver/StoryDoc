@@ -150,5 +150,19 @@ namespace WebStoryDoc.Models.Repositories
                 
             }
         }
+
+        public long Count()
+        {
+            return session.QueryOver<T>().RowCount();
+        }
+
+        public long CountMemory()
+        {
+            var crit = session.CreateCriteria<Document>();
+
+            crit.SetProjection(Projections.Sum("FileSize"));
+
+            return crit.UniqueResult<long>();
+        }
     }
 }
